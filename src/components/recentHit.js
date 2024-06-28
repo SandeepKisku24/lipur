@@ -1,18 +1,35 @@
 import { Group, Stack, Title, Text } from "@mantine/core";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { recentHits_data } from "./recentHit_data";
 import "./recentHit.css";
 
 const AllTimeHits = () => {
-    useEffect(() => {
-        const videoContainer = document.querySelector(".ytp-show-cards-title");
-        if (videoContainer) {
+    const videoRefs = useRef([]);
+
+        useEffect(() => {
+            const videoContainer = document.querySelector(".ytp-show-cards-title");
+            if (videoContainer) {
             videoContainer.classList.add("ytp-chrome-top ");
-        }
-        else{
+            }
+            else{
             console.log("hello");
-        }
+            }
     }, []);
+
+    const enterPiP = (index) => {
+        const videoElement = videoRefs.current[index];
+        if (videoElement) {
+            if (document.pictureInPictureElement) {
+                document.exitPictureInPicture().catch(error => {
+                    console.error("Failed to exit PiP", error);
+                });
+            } else {
+                videoElement.requestPictureInPicture().catch(error => {
+                    console.error("Failed to enter PiP", error);
+                });
+            }
+        }
+    };
 
     return (
         <Stack gap={10}>
@@ -21,8 +38,9 @@ const AllTimeHits = () => {
                 {recentHits_data.map((item, index) => (
                     <Stack key={index} style={{ color: "#fff" }}>
                         <div className="video-container">
-                            <div className="custom-play-button"></div>
+                            <div className="custom-play-button" onClick={() => enterPiP(index)}></div>
                             <iframe
+                                ref={el => videoRefs.current[index] = el}
                                 className="vid"
                                 height={120}
                                 width={180}
