@@ -1,6 +1,7 @@
 import { Group, Stack, Title, Text, Image } from "@mantine/core";
 import React, { useEffect, useRef, useState } from "react";
 import { recentHits_data } from "./recentHit_data";
+import CloseIcon from '@mui/icons-material/Close';
 import "./recentHit.css";
 
 const AllTimeHits = () => {
@@ -47,9 +48,17 @@ const AllTimeHits = () => {
                 ))}
                 {
                     show>-1?
-                    <div className="video-container" onMouseLeave={()=>{
+                    <div className="video-container" >
+                    <CloseIcon style={{
+                        position:"absolute",
+                        
+                        right: "0",
+                        color:"#000",
+                        backgroundColor:"#fff"
+
+                    }} onClick={()=>{
                         setShow(-1);
-                    }}>
+                    }}/>
                     <iframe width="300" height="250" src={"https://www.youtube.com/embed/" + vid +"?si=RpJXLSXyeImFZKKj"} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>:<></>
                 }
