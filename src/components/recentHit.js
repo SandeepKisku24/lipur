@@ -32,8 +32,8 @@ const AllTimeHits = () => {
     };
 
     return (
-        <Stack gap={10}>
-            <Title style={{ color: "#fff" }}>Recent Hits</Title>
+        <Stack gap={10} h={500}>
+            <Title style={{ color: "#fff" }} h={100}>Recent Hits now</Title>
             <Group>
                 {recentHits_data.map((item, index) => (
                     <Stack key={index} style={{ color: "#fff" }}>
