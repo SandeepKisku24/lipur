@@ -23,6 +23,7 @@ function App() {
               
                 <Routes>
                         <Route exact path="/" element={<Home />} />
+                        <Route path="/lipur" element={<Home />} />
                 </Routes>
             </Group>
             
