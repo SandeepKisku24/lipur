@@ -15,7 +15,7 @@ function App() {
   return (
     <MantineProvider>
         <div className="App" style={{backgroundColor:"#000"}} >
-            <Router>
+            <Router basename="lipur">
             <Group style={{ height: '100vh', alignItems: 'flex-start', margin: 0, padding: 0 }}>
                 <div style={{ width: '25%', margin: 0, padding: 0 }}>
                     <Header />
