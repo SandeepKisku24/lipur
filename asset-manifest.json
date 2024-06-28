@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/lipur/static/css/main.32154ae7.css",
+    "main.js": "/lipur/static/js/main.a140362b.js",
+    "static/media/musical instrument.png": "/lipur/static/media/musical instrument.f7ea40009089bc7a951b.png",
+    "static/media/dingra_boys.jpg": "/lipur/static/media/dingra_boys.be4e0e6a7f819de3c840.jpg",
+    "static/media/julius.jpg": "/lipur/static/media/julius.2d6f8c131a62dcdd5666.jpg",
+    "static/media/romeo_baskey.jpg": "/lipur/static/media/romeo_baskey.3468849ce7ffba392bb3.jpg",
+    "static/media/raju_soren.jpg": "/lipur/static/media/raju_soren.7e2f0a8941636418ed38.jpg",
+    "static/media/stephan_tudu.jpg": "/lipur/static/media/stephan_tudu.d747b98eed085888a5d1.jpg",
+    "static/media/tom_murmu.jpg": "/lipur/static/media/tom_murmu.e435e31767a44c0575c1.jpg",
+    "index.html": "/lipur/index.html",
+    "main.32154ae7.css.map": "/lipur/static/css/main.32154ae7.css.map",
+    "main.a140362b.js.map": "/lipur/static/js/main.a140362b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32154ae7.css",
+    "static/js/main.a140362b.js"
+  ]
+}
