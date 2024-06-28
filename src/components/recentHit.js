@@ -1,4 +1,4 @@
-import { Group, Stack, Title, Text } from "@mantine/core";
+import { Group, Stack, Title, Text, Image } from "@mantine/core";
 import React, { useEffect, useRef, useState } from "react";
 import { recentHits_data } from "./recentHit_data";
 import "./recentHit.css";
@@ -6,6 +6,7 @@ import "./recentHit.css";
 const AllTimeHits = () => {
     const videoRefs = useRef([]);
     const [vid,setVid] = useState();
+    const [show,setShow] = useState(-1);
         useEffect(() => {
             const videoContainer = document.querySelector(".ytp-show-cards-title");
             if (videoContainer) {
@@ -37,13 +38,21 @@ const AllTimeHits = () => {
             <Group>
                 {recentHits_data.map((item, index) => (
                     <Stack key={index} style={{ color: "#fff" }}>
-                        <div className="video-container">
-                            <div className="custom-play-button" onClick={() => enterPiP(index)}></div>
-                            <iframe width="180" height="120" src={"https://www.youtube.com/embed/" + item.link +"?si=RpJXLSXyeImFZKKj"} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                        <Image h={120} w={150} src={item.img} onClick={()=>{
+                            setVid(item.link);
+                            setShow(index);
+                        }}/>
                         <Text>{item.song}</Text>
                     </Stack>
                 ))}
+                {
+                    show>-1?
+                    <div className="video-container" onMouseLeave={()=>{
+                        setShow(-1);
+                    }}>
+                    <iframe width="300" height="250" src={"https://www.youtube.com/embed/" + vid +"?si=RpJXLSXyeImFZKKj"} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>:<></>
+                }
             </Group>
         </Stack>
     );

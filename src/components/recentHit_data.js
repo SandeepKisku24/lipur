@@ -11,8 +11,8 @@ export const recentHits_data = [
         song : "Sitak Tikin",
         singer : "Vimal Kr. Saha ",
         views :19,
-        img:"https://i.ytimg.com/vi/ulF7kYDMiWE/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAXfHWSoOngbjYDsMNRLSA6f_5wWw",
-        link : "XVP82qM52D4?"
+        img:"https://i.ytimg.com/vi/XVP82qM52D4/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhBIGUoGjAP&rs=AOn4CLA8LTDXkHW_-PG8XnVk-0MDE4DkVg",
+        link : "XVP82qM52D4"
     }
     ,
     {
