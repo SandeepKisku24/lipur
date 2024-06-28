@@ -7,10 +7,10 @@ const PChannels = ()=>{
         <Text c="#fff"  fz={24} fw={700}>Popular Channels</Text>
         <Group gap={20} mx="">
             {pop_chanel_data.map((item, index) => (
-                <Stack key={index} c="#fff" w={150} >
-                    <Image src={item.src} h={120} w={120} style={{borderRadius:"50%"}} />
-                    <Text fw={700}>{item.name}</Text>
-                    <Text>{item.artist}</Text>
+                <Stack key={index} c="#fff" w={150}  gap={2}>
+                    <Image src={item.src} h={80} w={80} style={{borderRadius:"50%"}} mx="auto" />
+                    <Text fw={700} mx="auto" >{item.name}</Text>
+                    <Text lineClamp={1} c="gray" mx="auto" >{item.artist}</Text>
                     </Stack>
             ))}
         </Group>

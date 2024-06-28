@@ -34,16 +34,21 @@ const AllTimeHits = () => {
     };
 
     return (
-        <Stack gap={10} h={500}>
-            <Title style={{ color: "#fff" }} h={100}>Recent Hits now</Title>
+        <Stack gap={10} h={500} mt={30}>
+            <Text c="#fff"  fz={24} fw={700}>Recent Hits </Text>
             <Group>
                 {recentHits_data.map((item, index) => (
-                    <Stack key={index} style={{ color: "#fff" }}>
+                    <Stack key={index} style={{ color: "#fff"}} w={180}>
                         <Image h={120} w={150} src={item.img} onClick={()=>{
                             setVid(item.link);
                             setShow(index);
-                        }}/>
-                        <Text>{item.song}</Text>
+                        }} mx="auto"/>
+                        <Stack fz="14px" gap={2}>
+                            <Text  lineClamp={1}><span style={{fontWeight:"600"}}>{item.song}</span> &nbsp;&nbsp; <span style={{
+                                color:"red"
+                            }}>{item.views} &nbsp;M views</span></Text>
+                            <Text lineClamp={1} c="gray">{item.singer}</Text>
+                        </Stack>
                     </Stack>
                 ))}
                 {

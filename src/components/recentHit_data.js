@@ -2,7 +2,7 @@ export const recentHits_data = [
     {
         song : "Puhal Mone",
         singer : "Rajbnus Murmu & Amrita Monalisha Soren ",
-        views :"7.5 M",
+        views :"7.5",
         img:"https://i.ytimg.com/vi/xom4zNuaDrs/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC9Sa1M3uZUtY-X-f_5dIVc5ItgaA",
         link : "xom4zNuaDrs"
     }
