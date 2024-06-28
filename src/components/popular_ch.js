@@ -7,7 +7,7 @@ const PChannels = ()=>{
         <Text c="#fff"  fz={24} fw={700}>Popular Channels</Text>
         <Group gap={20} mx="">
             {pop_chanel_data.map((item, index) => (
-                <Stack key={index} c="#fff" w={150} h={280}>
+                <Stack key={index} c="#fff" w={150} >
                     <Image src={item.src} h={120} w={120} style={{borderRadius:"50%"}} />
                     <Text fw={700}>{item.name}</Text>
                     <Text>{item.artist}</Text>

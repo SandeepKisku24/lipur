@@ -1,13 +1,14 @@
 import React from "react";
 import PChannels from "./components/popular_ch";
 import { Stack } from "@mantine/core";
+import AllTimeHits from "./components/recentHit";
 
 const Home = ()=>{
     return(
-        <Stack w="73%">
+        <div style={{width:"73%"}}>
             <PChannels/>
-            <PChannels/>
-        </Stack>
+            <AllTimeHits/>
+        </div>
     )
 }
 
