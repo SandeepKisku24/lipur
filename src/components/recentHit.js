@@ -39,17 +39,7 @@ const AllTimeHits = () => {
                     <Stack key={index} style={{ color: "#fff" }}>
                         <div className="video-container">
                             <div className="custom-play-button" onClick={() => enterPiP(index)}></div>
-                            <iframe
-                                ref={el => videoRefs.current[index] = el}
-                                className="vid"
-                                height={120}
-                                width={180}
-                                id="youtube-player"
-                                src="https://www.youtube.com/embed/BTsU5Y4U2yA?controls=1&modestbranding=1&rel=0&enablejsapi=1"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
+                            <iframe width="180" height="120" src="https://www.youtube.com/embed/xom4zNuaDrs?si=RpJXLSXyeImFZKKj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <Text>{item.song}</Text>
                     </Stack>
