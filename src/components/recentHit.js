@@ -58,19 +58,7 @@ const AllTimeHits = () => {
                         </Stack>
                     </Stack>
                 ))}
-                {show > -1 &&
-                    <div className="video-container">
-                        <CloseIcon style={{
-                            position: "absolute",
-                            right: "0",
-                            color: "#000",
-                            backgroundColor: "#fff"
-                        }} onClick={() => {
-                            setShow(-1);
-                        }} />
-                        <iframe width="300" height="250" src={"https://www.youtube.com/embed/" + vid + "?si=RpJXLSXyeImFZKKj"} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                    </div>
-                }
+                
             </Group>
             {slide > -totalWidth + containerWidth * 2 &&
                 <KeyboardArrowRightIcon onClick={() => {
@@ -83,6 +71,19 @@ const AllTimeHits = () => {
                 }} style={{ backgroundColor: "#fff", borderRadius: "50%", width: "20px", height: "20px", position: "absolute", top: "50%", transform: "translateY(-50%)", left: "2%" }} />
             }
             </Stack>
+            {show > -1 &&
+                    <div className="video-container">
+                        <CloseIcon style={{
+                            position: "absolute",
+                            right: "0",
+                            color: "#000",
+                            backgroundColor: "#fff"
+                        }} onClick={() => {
+                            setShow(-1);
+                        }} />
+                        <iframe width="300" height="250" src={"https://www.youtube.com/embed/" + vid + "?si=RpJXLSXyeImFZKKj"} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                    </div>
+                }
         </Stack>
     );
 };
