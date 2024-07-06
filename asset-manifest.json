@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lipur/static/css/main.087d4fd7.css",
-    "main.js": "/lipur/static/js/main.705ec192.js",
+    "main.js": "/lipur/static/js/main.2d447637.js",
     "static/media/musical instrument.png": "/lipur/static/media/musical instrument.f7ea40009089bc7a951b.png",
     "static/media/dingra_boys.jpg": "/lipur/static/media/dingra_boys.be4e0e6a7f819de3c840.jpg",
     "static/media/julius.jpg": "/lipur/static/media/julius.2d6f8c131a62dcdd5666.jpg",
@@ -11,10 +11,10 @@
     "static/media/tom_murmu.jpg": "/lipur/static/media/tom_murmu.e435e31767a44c0575c1.jpg",
     "index.html": "/lipur/index.html",
     "main.087d4fd7.css.map": "/lipur/static/css/main.087d4fd7.css.map",
-    "main.705ec192.js.map": "/lipur/static/js/main.705ec192.js.map"
+    "main.2d447637.js.map": "/lipur/static/js/main.2d447637.js.map"
   },
   "entrypoints": [
     "static/css/main.087d4fd7.css",
-    "static/js/main.705ec192.js"
+    "static/js/main.2d447637.js"
   ]
 }
